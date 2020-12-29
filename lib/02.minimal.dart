@@ -20,7 +20,7 @@ class _MijnWidgetStaat extends State<MijnStatefulWidget> {
 
   void veranderKleur() {
     setState(() {
-      kleur == Colors.blue ? kleur = Colors.red : kleur = Colors.blue;
+      kleur = kleur==Colors.blue ? Colors.red : Colors.blue;
     });
     print(kleur);
   }
