@@ -7,14 +7,8 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree(),
+      body: Text("Hello world!"),
       appBar: AppBar(title: Text("Basiswidgets"),),
     ),
   );
-}
-
-class AppTree extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Text("Hello world");
-  }
 }
