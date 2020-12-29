@@ -15,6 +15,6 @@ class AppRoot extends StatelessWidget {
 
 class AppTree extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Text("Hier komt de inhoud van de app");
+    return Center(child: Text("Hier komt de inhoud van de app"));
   }
 }
