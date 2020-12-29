@@ -27,16 +27,21 @@ class AppTree extends StatelessWidget {
               color: Colors.green,
               child:
                   Center(child: Text("Container 2 bevat heel veel tekst.")))),
+      Expanded(child: Row(
+          children: <Widget>[
+            Expanded(child: Container(color: Colors.purple, child: Center(child: Text("Container 3a")))),
+            Expanded(child: Container(color: Colors.orange, child: Center(child: Text("Container 3b")))),
+          ])),
       Expanded(
           child: Stack(children: <Widget>[
         Container(
-            color: Colors.blue, child: Center(child: Text("Container 3a"))),
+            color: Colors.blue, child: Center(child: Text("Container 4a"))),
         Positioned(
           left: 20,
           top: 20,
           child: Container(
             color: Colors.yellow.withOpacity(0.7),
-            child: Center(child: Text("Container 3b")),
+            child: Center(child: Text("Container 4b")),
             width: 100,
             height: 100,
           ),
