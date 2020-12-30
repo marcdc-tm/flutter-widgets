@@ -6,6 +6,12 @@ void main() {
 }
 
 class TabBarDemo extends StatelessWidget {
+  final GlobalKey<NavigatorState> tabNavKey1 = GlobalKey<NavigatorState>();
+  final GlobalKey<NavigatorState> tabNavKey2 = GlobalKey<NavigatorState>();
+  final GlobalKey<NavigatorState> tabNavKey3 = GlobalKey<NavigatorState>();
+  final GlobalKey<NavigatorState> tabNavKey4 = GlobalKey<NavigatorState>();
+  final GlobalKey<NavigatorState> tabNavKey5 = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
@@ -15,28 +21,44 @@ class TabBarDemo extends StatelessWidget {
       ],
       home: DefaultTabController(
         length: 5,
-        child: Scaffold(
-          appBar: AppBar(
-            bottom: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_railway)),
-                Tab(icon: Icon(Icons.directions_boat)),
-                Tab(icon: Icon(Icons.directions_bike)),
-                Tab(icon: Icon(Icons.directions_bus)),
+        child: CupertinoTabScaffold(
+          tabBar: CupertinoTabBar(
+              items: [
+                BottomNavigationBarItem(icon: Icon(Icons.directions_car)),
+                BottomNavigationBarItem(icon: Icon(Icons.directions_railway)),
+                BottomNavigationBarItem(icon: Icon(Icons.directions_boat)),
+                BottomNavigationBarItem(icon: Icon(Icons.directions_bike)),
+                BottomNavigationBarItem(icon: Icon(Icons.directions_bus)),
               ],
             ),
-            title: Text('Vervoermiddelen'),
-          ),
-          body: TabBarView(
-            children: [
-              Car(),
-              Train(),
-              Boat(),
-              Bike(),
-              Bus(),
-            ],
-          ),
+          tabBuilder: (context, index) {
+            if (index == 0) {
+              return CupertinoTabView(
+                navigatorKey: tabNavKey1,
+                builder: (BuildContext context) => Car(),
+              );
+            } else if (index == 1) {
+              return CupertinoTabView(
+                navigatorKey: tabNavKey2,
+                builder: (BuildContext context) => Train(),
+              );
+            } else if (index == 2) {
+              return CupertinoTabView(
+                navigatorKey: tabNavKey3,
+                builder: (BuildContext context) => Boat(),
+              );
+            } else if (index == 3) {
+              return CupertinoTabView(
+                navigatorKey: tabNavKey4,
+                builder: (BuildContext context) => Bike(),
+              );
+            } else {
+              return CupertinoTabView(
+                navigatorKey: tabNavKey5,
+                builder: (BuildContext context) => Bus(),
+              );
+            }
+          },
         ),
       ),
     );
@@ -79,18 +101,18 @@ class Bike extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Container(
-                margin: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(50),
                 child: Text("Een fiets is een voertuig dat veelal met spierkracht wordt aangedreven. " +
                 "De snelheid kan variëren aangezien de gebruiker zelf kan bepalen hoeveel energie hij/zij in het aandrijven steekt. " +
                 "De hedendaagse fiets bestaat uit ten minste twee wielen, een frame, een zadel, een stuur en een trapas met pedalen. " + ""
                 "Sommige fietsen hebben een (hulp)motor. Fietsen met een elektrische motor als aandrijving worden ook wel 'e-bikes' genoemd. " +
-                "Het grootste deel van de moderne fietsen heeft een kettingaandrijving, hoewel een asaandrijving of riemaandrijving ook mogelijk is. " + ""
-                "Van de fiets zijn andere vervoermiddelen afgeleid, zoals de vooral in Azië populaire riksja en becak, " +
-                "en enkele gemotoriseerde varianten die als uitvindingen een eigen leven zijn gaan leiden: de bromfiets, snorfiets, scooter en motorfiets.", textScaleFactor: 1.5,)),
+                "Het grootste deel van de moderne fietsen heeft een kettingaandrijving, hoewel een asaandrijving of riemaandrijving ook mogelijk is. " +
+                "", textScaleFactor: 1.5,)),
           ),
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8),
+              margin: const EdgeInsets.only(bottom: 80),
               child: Icon(Icons.directions_bike, size: 58),
             ),
           )
