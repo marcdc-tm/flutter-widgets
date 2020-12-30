@@ -51,6 +51,9 @@ flutter:
   assets:
     - assets/images/bird1.jpg
     - assets/images/bird2.jpg
+    - assets/images/kolibrie.jpg
+    - assets/images/ijsvogel.jpg
+    - assets/images/oehoe.jpg
     - assets/audio/holiday-yuriybespalov.mp3
     - assets/video/bees.mp4
 
