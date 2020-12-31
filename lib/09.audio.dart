@@ -22,7 +22,7 @@ class AppTree extends StatelessWidget {
 
     return Center(
       child: RaisedButton(
-        onPressed: () { audioSpeler.play('audio/holiday-yuriybespalov.mp3', volume: 100); },
+        onPressed: () { audioSpeler.play('audio/holiday-yuriybespalov.mp3', volume: 1000); },
         child: Text('Speel muziek', textScaleFactor: 2)
       )
     );
