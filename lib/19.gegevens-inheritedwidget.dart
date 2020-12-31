@@ -15,7 +15,7 @@ class AppRoot extends StatelessWidget {
 
 class AppTree extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Text("Dis is de koptekst van de app", style: InheritContainer.of(context).kopTekst);
+    return Text("Dit is de koptekst van de app", style: InheritContainer.of(context).kopTekst);
   }
 }
 
