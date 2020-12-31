@@ -54,6 +54,9 @@ flutter:
     - assets/images/kolibrie.jpg
     - assets/images/ijsvogel.jpg
     - assets/images/oehoe.jpg
+    - assets/images/gecko.jpg
+    - assets/images/iguana.jpg
+    - assets/images/komodovaraan.jpg
     - assets/audio/holiday-yuriybespalov.mp3
     - assets/video/bees.mp4
 
