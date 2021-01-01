@@ -1,39 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(InheritContainer(child: AppRoot()));
+  runApp(KleurGever(kleur: Colors.blue, child: AppRoot()));
 }
 
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree(),
+      body: Tekst(),
       appBar: AppBar(title: Text("Gegevens doorgeven: inherited widget"),),
     ),
   );
 }
 
-class AppTree extends StatelessWidget {
+class Tekst extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Text("Dis is de koptekst van de app", style: InheritContainer.of(context).kopTekst);
+    return Container(
+      child: Text("Dit is de tekst van de app", style: TextStyle(
+          color: KleurGever.of(context).kleur,
+          fontSize: 40,
+          fontWeight: FontWeight.bold
+      )),
+      margin: EdgeInsets.all(50),
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+    );;
   }
 }
 
-class InheritContainer extends InheritedWidget {
-  InheritContainer({Key key, Widget child}) : super(key: key, child: child);
+class KleurGever extends InheritedWidget {
+  final Color kleur;
 
-  TextStyle kopTekst = TextStyle(
-    color: Color(0xff4696ec),
-    fontSize: 40,
-    fontWeight: FontWeight.bold
-  );
+  KleurGever({this.kleur, Widget child, Key key,}) : super(child: child, key: key,);
 
-  static InheritContainer of(BuildContext context) {
-    return (context.dependOnInheritedWidgetOfExactType<InheritContainer>() as InheritContainer);
-  }
+  static KleurGever of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<KleurGever>() as KleurGever;
 
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) {
-    return true;
+  bool updateShouldNotify(KleurGever oldWidget) {
+    return false;
   }
 }
