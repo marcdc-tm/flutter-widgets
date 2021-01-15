@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io' as io;
 
-import 'package:audiotagger/audiotagger.dart';
 import 'package:flutter/material.dart';
+import 'package:audiotagger/audiotagger.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() => runApp(MyApp());

@@ -1,6 +1,6 @@
 # eersteapp
 
-Een eerste app
+Flutter widgets
 
 ## Getting Started
 

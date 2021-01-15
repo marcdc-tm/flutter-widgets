@@ -23,9 +23,9 @@ environment:
 dependencies:
   shared_preferences: ^0.5.8
   audioplayers: ^0.15.1
-  video_player: ^0.10.11+2
-  audiotagger: ^1.1.0
   permission_handler: ^5.0.1+1
+  audiotagger: ^1.1.0
+  video_player: ^0.10.11+2
   flutter:
     sdk: flutter
 
@@ -35,6 +35,7 @@ dependencies:
   cupertino_icons: ^0.1.3
 
 dev_dependencies:
+  change_app_package_name: ^0.1.2
   flutter_test:
     sdk: flutter
 
