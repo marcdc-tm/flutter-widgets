@@ -1,10 +1,9 @@
-import 'dart:async';
 import 'dart:convert';
 import 'dart:io' as io;
 
-import 'package:audiotagger/audiotagger.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:audiotagger/audiotagger.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,14 +16,12 @@ class _MyAppState extends State<MyApp> {
   final filePath = "/storage/emulated/0/Music";
   Widget result;
   Audiotagger tagger = new Audiotagger();
-  List file = new List();
+  List files = new List();
 
   @override
   void initState() {
     super.initState();
     _checkPermissions();
-    _listofFiles();
-    _readTags();
   }
 
   void _checkPermissions() async {
@@ -33,15 +30,10 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  void _listofFiles() async {
-    setState(() {
-      file = io.Directory(filePath).listSync();
-    });
-  }
-
-  void _readTags() {
+  void _readTags() async {
+    files = await io.Directory(filePath).listSync();
     Map<String, Map> outputs = Map();
-    file.forEach((element) {
+    files.forEach((element) {
       String path = element.path;
       if (path.endsWith(".mp3")) {
         tagger.readTagsAsMap(path: element.path).then((tags) {
@@ -55,42 +47,19 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  Future _readArtwork() async {
-    final output = await tagger.readArtwork(
-      path: filePath,
-    );
-    setState(() {
-      result = output != null ? Image.memory(output) : Text("No artwork found");
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    _readTags();
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Audiotagger example app'),
         ),
         body: Center(
-          child: Column(
-            children: <Widget>[
-              result != null ? result : Text("Ready.."),
-              RaisedButton(
-                child: Text("Read tags"),
-                onPressed: () {
-                  _readTags();
-                },
-              ),
-              RaisedButton(
-                child: Text("Read artwork"),
-                onPressed: () async {
-                  await _readArtwork();
-                },
-              ),
-            ],
-          ),
+          child: result != null ? result : Text("Searching files.."),
         ),
-      ),
+      )
     );
   }
 }
