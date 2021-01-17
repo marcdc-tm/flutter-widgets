@@ -1,96 +1,61 @@
-import 'dart:async';
-import 'dart:convert';
-import 'dart:io' as io;
+import 'dart:typed_data';
 
-import 'package:audiotagger/audiotagger.dart';
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+void main() {
+  runApp(AppRoot());
 }
 
-class _MyAppState extends State<MyApp> {
-  final filePath = "/storage/emulated/0/Music";
-  Widget result;
-  Audiotagger tagger = new Audiotagger();
-  List file = new List();
+class AppRoot extends StatelessWidget {
+  Widget build(BuildContext buildContext) => MaterialApp(
+    home: Scaffold(
+      body: AppTree(),
+      appBar: AppBar(title: Text("Lijst muziek"),),
+    ),
+  );
+}
 
+class AppTree extends StatefulWidget{
+  _AppTreeState createState() => _AppTreeState();
+}
+
+class Track {
+  String _title;
+  String _artist;
+  int _year;
+  String _album;
+  String _genre;
+  Image _artwork = null;
+  String _file;
+
+  Track(this._title, this._artist, this._year, this._album, this._genre);
+
+  void set artwork(Uint8List artworkBytes) {
+    _artwork = Image.memory(artworkBytes);
+  }
+}
+
+class _AppTreeState extends State<AppTree> {
   @override
   void initState() {
     super.initState();
-    _checkPermissions();
-    _listofFiles();
-    _readTags();
   }
 
-  void _checkPermissions() async {
-    if (!await Permission.storage.request().isGranted) {
-      await _checkPermissions();
-    }
-  }
-
-  void _listofFiles() async {
-    setState(() {
-      file = io.Directory(filePath).listSync();
-    });
-  }
-
-  void _readTags() {
-    Map<String, Map> outputs = Map();
-    file.forEach((element) {
-      String path = element.path;
-      if (path.endsWith(".mp3")) {
-        tagger.readTagsAsMap(path: element.path).then((tags) {
-          if (tags.containsKey("title")) outputs[tags["title"]] = tags;
-        }).then((value) {
-          setState(() {
-            result = Text(jsonEncode(outputs));
-          });
-        });
-      }
-    });
-  }
-
-  Future _readArtwork() async {
-    final output = await tagger.readArtwork(
-      path: filePath,
-    );
-    setState(() {
-      result = output != null ? Image.memory(output) : Text("No artwork found");
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Audiotagger example app'),
-        ),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              result != null ? result : Text("Ready.."),
-              RaisedButton(
-                child: Text("Read tags"),
-                onPressed: () {
-                  _readTags();
-                },
-              ),
-              RaisedButton(
-                child: Text("Read artwork"),
-                onPressed: () async {
-                  await _readArtwork();
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+    bool isVisible = true;
+
+    return ListView(
+        children: maakTrackRijen()
     );
+  }
+
+  List<Row> maakTrackRijen() {
+    List<Row> rijen = List<Row>();
+
+    for (int i=0; i<10; i++) {
+      Track track = Track("Song "+i.toString(), "Artist "+i.toString(), 2000+i, "Album "+i.toString(), "Genre "+i.toString());
+      Row rij = Row();
+    }
+    return rijen;
   }
 }
