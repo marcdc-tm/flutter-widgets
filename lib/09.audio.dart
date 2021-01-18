@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(AppRoot());
@@ -15,7 +16,8 @@ class AppRoot extends StatelessWidget {
 }
 
 class AppTree extends StatelessWidget {
-  final AudioCache audioSpeler = AudioCache();
+  static AudioPlayer advancedPlayer = AudioPlayer();
+  final AudioCache audioSpeler = AudioCache(fixedPlayer: advancedPlayer);
 
   Widget build(BuildContext context) {
     audioSpeler.load('audio/holiday-yuriybespalov.mp3');
@@ -27,4 +29,9 @@ class AppTree extends StatelessWidget {
       )
     );
   }
+
+  void changeVolume(double value) {
+    advancedPlayer.setVolume(value);
+  }
 }
+
