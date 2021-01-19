@@ -63,10 +63,12 @@ flutter:
     - assets/images/8circle.jpg
     - assets/images/IWontRunfromIt.jpg
     - assets/images/NothingArrived.jpg
+    - assets/images/LadyMadonna.jpg
     - assets/audio/holiday-yuriybespalov.mp3
     - assets/audio/8circle.mp3
     - assets/audio/IWontRunfromIt.mp3
     - assets/audio/NothingArrived.mp3
+    - assets/audio/LadyMadonna.mp3
     - assets/video/bees.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
