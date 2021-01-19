@@ -1,9 +1,11 @@
 import 'dart:typed_data';
 import 'dart:async';
-
+import 'dart:io' as io;
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:audiotagger/audiotagger.dart';
 
 void main() {
   runApp(AppRoot());
@@ -11,13 +13,13 @@ void main() {
 
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
-        home: Scaffold(
-          body: AppTree(),
-          appBar: AppBar(
-            title: Text("Lijst muziek"),
-          ),
-        ),
-      );
+    home: Scaffold(
+      body: AppTree(),
+      appBar: AppBar(
+        title: Text("Lijst muziek"),
+      ),
+    ),
+  );
 }
 
 class AppTree extends StatefulWidget {
@@ -65,6 +67,7 @@ class Track {
 }
 
 class _AppTreeState extends State<AppTree> {
+  final filePath = "/storage/emulated/0/Music";
   final AudioPlayer advancedSpeler = AudioPlayer();
   final AudioCache audioSpeler = AudioCache();
   List<Track> tracks = new List<Track>();
@@ -73,36 +76,61 @@ class _AppTreeState extends State<AppTree> {
 
   @override
   void initState() {
+    super.initState();
+    _checkPermissions();
+    _readTags();
     audioSpeler.fixedPlayer = advancedSpeler;
-    add("8 Circle", "Bon Iver", 2016, "22, A Million", "Folk/Electronic", "8circle");
-    add("I Won't Run From It", "Big Red Machine", 2018, "Big Red Machine", "Electronic/Pop", "IWontRunfromIt");
-    add("Nothing Arrived", "Villagers", 2013, "{Awayland}", "Folk/Rock", "NothingArrived");
-    add("Lady Madonna", "The Beatles", 1968, "Lady Madonna", "Pop", "LadyMadonna");
-
     advancedSpeler.onAudioPositionChanged.listen((position) => setState(() {
       _position = position;
     }));
     advancedSpeler.onDurationChanged.listen((duration) => setState(() {
       _duration = duration;
     }));
-    super.initState();
   }
 
-  void add(String title, String artist, int year, String album, String genre, String filename) {
+  void _checkPermissions() async {
+    if (!await Permission.storage.request().isGranted) {
+      await _checkPermissions();
+    }
+  }
+
+  void _readTags() async {
+    List files = new List();
+    Audiotagger tagger = new Audiotagger();
+    files = await io.Directory(filePath).listSync();
+    await files.forEach((element) async {
+      String path = element.path;
+      if (path.endsWith(".mp3")) {
+        Map tags = await tagger.readTagsAsMap(path: path);
+        Uint8List bytes = await tagger.readArtwork(path: path);
+        add(tags["title"], tags["artist"], tags["year"], tags["album"], tags["genre"], path, bytes);
+      }
+    });
+    setState(() {
+
+    });
+  }
+
+  Track add(String title, String artist, int year, String album, String genre, String filepath, Uint8List bytes) {
     Track track = Track(title, artist, year, album, genre);
-    track.setArtworkByFile("assets/images/" + filename + ".jpg");
-    track.setFile("audio/" + filename + ".mp3");
+    track.setArtworkByBytes(bytes);
+    track.setFile(filepath);
     tracks.add(track);
     audioSpeler.load(track._file);
+    return track;
   }
 
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
-      maakTrackRij(tracks[0]),
-      maakTrackRij(tracks[1]),
-      maakTrackRij(tracks[2]),
-      maakTrackRij(tracks[3]),
-    ]);
+    if (tracks.isEmpty) {
+      return Container();
+    } else {
+      return Column(children: <Widget>[
+        maakTrackRij(tracks[0]),
+        maakTrackRij(tracks[1]),
+        maakTrackRij(tracks[2]),
+        maakTrackRij(tracks[3]),
+      ]);
+    }
   }
 
   Container maakTrackRij(Track track) {
@@ -112,8 +140,7 @@ class _AppTreeState extends State<AppTree> {
         decoration: BoxDecoration(border: Border.all()),
         child: Column(children: [
           Container(
-            padding:
-                const EdgeInsets.only(bottom: 5.0, left: 10.0, right: 10.0),
+            padding: const EdgeInsets.only(bottom: 5.0, left: 10.0, right: 10.0),
             child: Row(children: [
               Expanded(
                 flex: 7,
@@ -126,41 +153,23 @@ class _AppTreeState extends State<AppTree> {
                                 textScaleFactor: 1.2,
                                 text: TextSpan(
                                   text: track._title,
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w900),
+                                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900),
                                   children: <TextSpan>[
-                                    TextSpan(
-                                        text: "  by ",
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w300)),
-                                    TextSpan(
-                                        text: track._artist,
-                                        style: TextStyle(
-                                            fontSize: 11,
-                                            fontStyle: FontStyle.italic,
-                                            fontWeight: FontWeight.w300))
+                                    TextSpan(text: "  by ", style: TextStyle(fontSize: 11, fontWeight: FontWeight.w300)),
+                                    TextSpan(text: track._artist, style: TextStyle(fontSize: 11, fontStyle: FontStyle.italic, fontWeight: FontWeight.w300))
                                   ],
                                 )))),
                     Expanded(
                         child: Container(
                             child: RichText(
-                      text: TextSpan(
-                          text: track._album,
-                          style: TextStyle(color: Colors.grey, fontSize: 16)),
-                    ))),
+                              text: TextSpan(text: track._album, style: TextStyle(color: Colors.grey, fontSize: 16)),
+                            ))),
                     Expanded(
                         child: Container(
                             padding: const EdgeInsets.only(top: 5.0),
                             child: RichText(
-                                text: TextSpan(
-                                    text: track._year.toString() +
-                                        "     " +
-                                        track._genre,
-                                    style: TextStyle(
-                                        color: Colors.grey[600],
-                                        fontStyle: FontStyle.italic))))),
+                                text: TextSpan(text: track._year.toString() + "     " + track._genre, style: TextStyle(color: Colors.grey[600], fontStyle: FontStyle.italic))
+                            ))),
                   ]),
                 ),
               ),
@@ -184,7 +193,6 @@ class _AppTreeState extends State<AppTree> {
                         } else {
                           audioSpeler.play(track._file);
                           Timer.periodic(Duration(seconds: 1), (mijnTimer) {
-                            print(_position.inSeconds.toString() + ' : ' +_duration.inSeconds.toString());
                             if (_position.inSeconds==_duration.inSeconds) {
                               mijnTimer.cancel();
                               setState(() {
@@ -196,9 +204,9 @@ class _AppTreeState extends State<AppTree> {
                         }
                       });
                     },
-                    icon: track._isPlaying
-                        ? Icon(Icons.pause, size: 40)
-                        : (track._hasStarted ? Icon(Icons.play_circle_outline, size: 40) : Icon(Icons.play_arrow, size: 40)),
+                    icon: track._isPlaying ?
+                    Icon(Icons.pause, size: 40) :
+                    (track._hasStarted ? Icon(Icons.play_circle_outline, size: 40) : Icon(Icons.play_arrow, size: 40)),
                   ),
                 ),
               )
@@ -212,7 +220,8 @@ class _AppTreeState extends State<AppTree> {
                 backgroundColor: Colors.white,
                 valueColor: new AlwaysStoppedAnimation<Color>(Colors.blue)),
           ),
-        ]));
+        ])
+    );
   }
 
   void stopAll() {
