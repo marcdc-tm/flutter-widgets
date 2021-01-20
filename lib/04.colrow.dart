@@ -99,7 +99,6 @@ class AppTree extends StatelessWidget {
           col.children.add(zwart);
         }
       }
-
       row.children.add(Expanded(child: col));
     }
     return Container(
