@@ -248,8 +248,9 @@ class _AppTreeState extends State<AppTree> {
     audioSpeler.play(track._file, isLocal: true);
     nrPlaying = index;
     Timer.periodic(Duration(seconds: 1), (mijnTimer) {
-      print(_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
-      if (_position.inSeconds==_duration.inSeconds) {
+      int verstreken = mijnTimer.tick;
+      print(verstreken.toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
+      if (_position.inSeconds==_duration.inSeconds || verstreken>_duration.inSeconds) {
         mijnTimer.cancel();
         setState(() {
           playNext();
