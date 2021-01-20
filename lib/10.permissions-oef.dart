@@ -249,7 +249,7 @@ class _AppTreeState extends State<AppTree> {
     nrPlaying = index;
     Timer.periodic(Duration(seconds: 1), (mijnTimer) {
       int verstreken = mijnTimer.tick;
-      print(verstreken.toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
+      //print(verstreken.toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
       if (_position.inSeconds==_duration.inSeconds || verstreken>_duration.inSeconds) {
         mijnTimer.cancel();
         setState(() {
