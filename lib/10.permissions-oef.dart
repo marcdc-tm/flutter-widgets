@@ -6,6 +6,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:audiotagger/audiotagger.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() {
   runApp(AppRoot());
@@ -67,23 +68,24 @@ class Track {
 }
 
 class _AppTreeState extends State<AppTree> {
-  final filePath = "/storage/emulated/0/Music";
-  final AudioPlayer advancedSpeler = AudioPlayer();
-  final AudioCache audioSpeler = AudioCache();
+  final mapPath = "/storage/emulated/0/Music";
+  final AudioPlayer audioSpeler = AudioPlayer();
+  final Audiotagger tagger = Audiotagger();
   List<Track> tracks = new List<Track>();
   Duration _duration = new Duration();
   Duration _position = new Duration();
+  bool geladen = false;
+  int nrPlaying = -1;
 
   @override
   void initState() {
     super.initState();
     _checkPermissions();
     _readTags();
-    audioSpeler.fixedPlayer = advancedSpeler;
-    advancedSpeler.onAudioPositionChanged.listen((position) => setState(() {
+    audioSpeler.onAudioPositionChanged.listen((position) => setState(() {
       _position = position;
     }));
-    advancedSpeler.onDurationChanged.listen((duration) => setState(() {
+    audioSpeler.onDurationChanged.listen((duration) => setState(() {
       _duration = duration;
     }));
   }
@@ -96,44 +98,55 @@ class _AppTreeState extends State<AppTree> {
 
   void _readTags() async {
     List files = new List();
-    Audiotagger tagger = new Audiotagger();
-    files = await io.Directory(filePath).listSync();
-    await files.forEach((element) async {
-      String path = element.path;
-      if (path.endsWith(".mp3")) {
-        Map tags = await tagger.readTagsAsMap(path: path);
-        Uint8List bytes = await tagger.readArtwork(path: path);
-        add(tags["title"], tags["artist"], tags["year"], tags["album"], tags["genre"], path, bytes);
+    List mp3Files = new List();
+    files = await io.Directory(mapPath).listSync();
+    files.forEach((file) {
+      if (file.path.endsWith(".mp3")) {
+        mp3Files.add(file);
       }
     });
-    setState(() {
-
+    int aantalFiles = mp3Files.length;
+    int counter = 0;
+    mp3Files.forEach((file) async {
+      counter++;
+      addTrack(file.path).then((value) {
+        if (counter==aantalFiles) {
+          setState(() {
+            geladen = true;
+          });
+        }
+      });
     });
   }
 
-  Track add(String title, String artist, int year, String album, String genre, String filepath, Uint8List bytes) {
+  Future<void> addTrack(String filePath) async {
+    Map tags = await tagger.readTagsAsMap(path: filePath);
+    Uint8List bytes = await tagger.readArtwork(path: filePath);
+    add(tags["title"], tags["artist"], int.parse(tags["year"]), tags["album"], tags["genre"], filePath, bytes);
+  }
+
+  void add(String title, String artist, int year, String album, String genre, String filepath, Uint8List bytes) {
     Track track = Track(title, artist, year, album, genre);
     track.setArtworkByBytes(bytes);
     track.setFile(filepath);
     tracks.add(track);
-    audioSpeler.load(track._file);
-    return track;
   }
 
   Widget build(BuildContext context) {
-    if (tracks.isEmpty) {
-      return Container();
+    if (!geladen) {
+      return Container(
+        child: Center(child: Text("Searching files...")),
+      );
     } else {
-      return Column(children: <Widget>[
-        maakTrackRij(tracks[0]),
-        maakTrackRij(tracks[1]),
-        maakTrackRij(tracks[2]),
-        maakTrackRij(tracks[3]),
-      ]);
+      List<Widget> widgets = [];
+      tracks.asMap().forEach((index, track) {
+        widgets.add(maakTrackRij(index, track));
+      });
+      return ListView(children: widgets);
     }
   }
 
-  Container maakTrackRij(Track track) {
+  Container maakTrackRij(int index, Track track) {
     return Container(
         margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0),
         padding: const EdgeInsets.only(top: 5.0),
@@ -188,19 +201,10 @@ class _AppTreeState extends State<AppTree> {
                           stopAll();
                         }
                         if (track._isPlaying) {
-                          advancedSpeler.pause();
+                          audioSpeler.pause();
                           track.pause();
                         } else {
-                          audioSpeler.play(track._file);
-                          Timer.periodic(Duration(seconds: 1), (mijnTimer) {
-                            if (_position.inSeconds==_duration.inSeconds) {
-                              mijnTimer.cancel();
-                              setState(() {
-                                stopAll();
-                              });
-                            }
-                          });
-                          track.play();
+                          play(index, track);
                         }
                       });
                     },
@@ -213,7 +217,7 @@ class _AppTreeState extends State<AppTree> {
             ]),
           ),
           Container(
-            height: track._hasStarted ? 7 : 1,
+            height: track._hasStarted ? 5 : 1,
             decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.grey[300]))),
             child: LinearProgressIndicator(
                 value: track._hasStarted && _duration.inSeconds.toDouble()>0 ? _position.inSeconds.toDouble()/_duration.inSeconds.toDouble() : 0,
@@ -225,9 +229,32 @@ class _AppTreeState extends State<AppTree> {
   }
 
   void stopAll() {
-    advancedSpeler.stop();
+    audioSpeler.stop();
     tracks.forEach((t) {
       t.stop();
     });
+    nrPlaying = -1;
+  }
+
+  void playNext() {
+    int startPlaying = nrPlaying + 1;
+    if (startPlaying > tracks.length - 1) startPlaying = 0;
+    stopAll();
+    Track track = tracks.asMap()[startPlaying];
+    play(startPlaying, track);
+  }
+
+  void play(int index, Track track) {
+    audioSpeler.play(track._file, isLocal: true);
+    nrPlaying = index;
+    Timer.periodic(Duration(seconds: 1), (mijnTimer) {
+      if (_position.inSeconds==_duration.inSeconds) {
+        mijnTimer.cancel();
+        setState(() {
+          playNext();
+        });
+      }
+    });
+    track.play();
   }
 }
