@@ -1,10 +1,11 @@
 # eersteapp
 
-Een eerste app
+Flutter widgets
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project holds all the flutter widgets examples used in the course Native Apps (of Thomas More, Graduaat Programmeren), given by Marc De Caluwé.
+All material in here is made by Marc De Caluwé (partly based on the book Apps ontwikkelen met Flutter by Mark van Heck, used in the course).
 
 A few resources to get you started if this is your first Flutter project:
 
