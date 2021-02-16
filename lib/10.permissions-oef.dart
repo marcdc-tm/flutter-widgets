@@ -72,6 +72,7 @@ class _AppTreeState extends State<AppTree> {
   final AudioPlayer audioSpeler = AudioPlayer();
   final Audiotagger tagger = Audiotagger();
   List<Track> tracks = new List<Track>();
+  Timer _mijnTimer;
   Duration _duration = new Duration();
   Duration _position = new Duration();
   bool geladen = false;
@@ -247,11 +248,12 @@ class _AppTreeState extends State<AppTree> {
   void play(int index, Track track) {
     audioSpeler.play(track._file, isLocal: true);
     nrPlaying = index;
-    Timer.periodic(Duration(seconds: 1), (mijnTimer) {
-      int verstreken = mijnTimer.tick;
+    if (_mijnTimer!=null) _mijnTimer.cancel();
+    _mijnTimer = Timer.periodic(Duration(seconds: 1), (_mijnTimer) {
+      int verstreken = _mijnTimer.tick;
       //print(verstreken.toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
       if (_position.inSeconds==_duration.inSeconds || verstreken>_duration.inSeconds) {
-        mijnTimer.cancel();
+        _mijnTimer.cancel();
         setState(() {
           playNext();
         });
