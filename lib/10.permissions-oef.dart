@@ -139,11 +139,17 @@ class _AppTreeState extends State<AppTree> {
         child: Center(child: Text("Searching files...")),
       );
     } else {
-      List<Widget> widgets = [];
+      /*List<Widget> widgets = [];
       tracks.asMap().forEach((index, track) {
         widgets.add(maakTrackRij(index, track));
       });
-      return ListView(children: widgets);
+      return ListView(children: widgets);*/
+      return ListView.builder(
+          itemCount: tracks.length,
+          itemBuilder: (context, index) {
+            return maakTrackRij(index, tracks[index]);
+          }
+      );
     }
   }
 
@@ -248,17 +254,21 @@ class _AppTreeState extends State<AppTree> {
   void play(int index, Track track) {
     audioSpeler.play(track._file, isLocal: true);
     nrPlaying = index;
-    if (_mijnTimer!=null) _mijnTimer.cancel();
-    _mijnTimer = Timer.periodic(Duration(seconds: 1), (_mijnTimer) {
-      int verstreken = _mijnTimer.tick;
-      //print(verstreken.toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
-      if (_position.inSeconds==_duration.inSeconds || verstreken>_duration.inSeconds) {
-        _mijnTimer.cancel();
-        setState(() {
-          playNext();
-        });
-      }
-    });
+    if (!track._hasStarted) {
+      int gepauzeerd = 0;
+      if (_mijnTimer!=null) _mijnTimer.cancel();
+      _mijnTimer = Timer.periodic(Duration(seconds: 1), (_mijnTimer) {
+        int verstreken = _mijnTimer.tick;;
+        if (!track._isPlaying) gepauzeerd++;
+        //print((verstreken - gepauzeerd).toString() + ' : ' +_position.inSeconds.toString() + ' : ' + _duration.inSeconds.toString());
+        if (_position.inSeconds==_duration.inSeconds || (verstreken-gepauzeerd)>_duration.inSeconds) {
+          _mijnTimer.cancel();
+          setState(() {
+            playNext();
+          });
+        }
+      });
+    }
     track.play();
   }
 }
