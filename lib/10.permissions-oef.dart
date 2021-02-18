@@ -139,11 +139,6 @@ class _AppTreeState extends State<AppTree> {
         child: Center(child: Text("Searching files...")),
       );
     } else {
-      /*List<Widget> widgets = [];
-      tracks.asMap().forEach((index, track) {
-        widgets.add(maakTrackRij(index, track));
-      });
-      return ListView(children: widgets);*/
       return ListView.builder(
           itemCount: tracks.length,
           itemBuilder: (context, index) {
