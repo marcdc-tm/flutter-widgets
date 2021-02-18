@@ -97,12 +97,18 @@ class _AppTreeState extends State<AppTree> {
   }
 
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
+    /*return ListView(children: <Widget>[
       maakTrackRij(tracks[0]),
       maakTrackRij(tracks[1]),
       maakTrackRij(tracks[2]),
       maakTrackRij(tracks[3]),
-    ]);
+    ]);*/
+    return ListView.builder(
+        itemCount: tracks.length,
+        itemBuilder: (context, index) {
+          return maakTrackRij(tracks[index]);
+        }
+      );
   }
 
   Container maakTrackRij(Track track) {
