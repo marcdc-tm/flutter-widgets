@@ -34,19 +34,19 @@ class AppTree extends StatelessWidget {
           ])),
       Expanded(
           child: Stack(children: <Widget>[
-        Container(
-            color: Colors.blue, child: Center(child: Text("Container 4a"))),
-        Positioned(
-          left: 20,
-          top: 20,
-          child: Container(
-            color: Colors.yellow.withOpacity(0.7),
-            child: Center(child: Text("Container 4b")),
-            width: 100,
-            height: 100,
-          ),
-        ),
-      ]))
+            Container(
+                color: Colors.blue, child: Center(child: Text("Container 4a"))),
+            Positioned(
+              left: 20,
+              top: 20,
+              child: Container(
+                color: Colors.yellow.withOpacity(0.7),
+                child: Center(child: Text("Container 4b")),
+                width: 100,
+                height: 100,
+              ),
+            ),
+          ]))
     ]);
   }
 }
