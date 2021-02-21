@@ -200,7 +200,7 @@ class _AppTreeState extends State<AppTree> {
                     onPressed: () {
                       setState(() {
                         if (!track._hasStarted) {
-                          stopAll();
+                          stop();
                         }
                         if (track._isPlaying) {
                           audioSpeler.pause();
@@ -230,7 +230,7 @@ class _AppTreeState extends State<AppTree> {
     );
   }
 
-  void stopAll() {
+  void stop() {
     audioSpeler.stop();
     tracks.forEach((t) {
       t.stop();
@@ -241,7 +241,7 @@ class _AppTreeState extends State<AppTree> {
   void playNext() {
     int startPlaying = nrPlaying + 1;
     if (startPlaying > tracks.length - 1) startPlaying = 0;
-    stopAll();
+    stop();
     Track track = tracks.asMap()[startPlaying];
     play(startPlaying, track);
   }
