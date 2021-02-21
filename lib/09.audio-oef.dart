@@ -67,6 +67,7 @@ class Track {
 class _AppTreeState extends State<AppTree> {
   final AudioPlayer advancedSpeler = AudioPlayer();
   final AudioCache audioSpeler = AudioCache();
+  Timer _mijnTimer;
   List<Track> tracks = new List<Track>();
   Duration _duration = new Duration();
   Duration _position = new Duration();
@@ -182,22 +183,25 @@ class _AppTreeState extends State<AppTree> {
                     onPressed: () {
                       setState(() {
                         if (!track._hasStarted) {
-                          stopAll();
+                          stop();
                         }
                         if (track._isPlaying) {
                           advancedSpeler.pause();
                           track.pause();
                         } else {
                           audioSpeler.play(track._file);
-                          Timer.periodic(Duration(seconds: 1), (mijnTimer) {
-                            print(_position.inSeconds.toString() + ' : ' +_duration.inSeconds.toString());
-                            if (_position.inSeconds==_duration.inSeconds) {
-                              mijnTimer.cancel();
-                              setState(() {
-                                stopAll();
-                              });
-                            }
-                          });
+                          if (!track._hasStarted) {
+                            if (_mijnTimer!=null) _mijnTimer.cancel();
+                            _mijnTimer = Timer.periodic(Duration(seconds: 1), (_mijnTimer) {
+                              print(_position.inSeconds.toString() + ' : ' +_duration.inSeconds.toString());
+                              if (_position.inSeconds==_duration.inSeconds) {
+                                _mijnTimer.cancel();
+                                setState(() {
+                                  stop();
+                                });
+                              }
+                            });
+                          }
                           track.play();
                         }
                       });
@@ -221,7 +225,7 @@ class _AppTreeState extends State<AppTree> {
         ]));
   }
 
-  void stopAll() {
+  void stop() {
     advancedSpeler.stop();
     tracks.forEach((t) {
       t.stop();
