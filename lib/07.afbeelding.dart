@@ -16,5 +16,6 @@ class AppRoot extends StatelessWidget {
 class AppTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network("https://boek.flutter.nl/libelle.jpg");
+    //return Image.asset("assets/images/bird1.jpg");
   }
 }

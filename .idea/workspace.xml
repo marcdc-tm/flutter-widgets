@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="" />
+    <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/07.afbeelding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/07.afbeelding.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_30]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -54,34 +60,34 @@
       <recent name="$PROJECT_DIR$/assets/video" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.04.colrow.dart">
-    <configuration name="10.permissions.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/10.permissions.dart" />
+  <component name="RunManager" selected="Flutter.08.tekstopmaak.dart">
+    <configuration name="05.menubalk-1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/05.menubalk-1.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="11.video.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/11.video.dart" />
+    <configuration name="05.menubalk-2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/05.menubalk-2.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="21.gegevens-inheritedwidget.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/21.gegevens-inheritedwidget.dart" />
+    <configuration name="06.dynamicmenu.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/06.dynamicmenu.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="22.gegevens-bibliotheek.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/22.gegevens-bibliotheek.dart" />
+    <configuration name="07.afbeelding.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/07.afbeelding.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="24.futurebuilder.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/24.futurebuilder.dart" />
+    <configuration name="08.tekstopmaak.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/08.tekstopmaak.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter.24.futurebuilder.dart" />
-        <item itemvalue="Flutter.22.gegevens-bibliotheek.dart" />
-        <item itemvalue="Flutter.21.gegevens-inheritedwidget.dart" />
-        <item itemvalue="Flutter.11.video.dart" />
-        <item itemvalue="Flutter.10.permissions.dart" />
+        <item itemvalue="Flutter.08.tekstopmaak.dart" />
+        <item itemvalue="Flutter.07.afbeelding.dart" />
+        <item itemvalue="Flutter.06.dynamicmenu.dart" />
+        <item itemvalue="Flutter.05.menubalk-2.dart" />
+        <item itemvalue="Flutter.05.menubalk-1.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -479,11 +485,11 @@
     </state>
     <state x="745" y="284" key="#xdebugger.evaluate/54.0.1866.1080@54.0.1866.1080" timestamp="1610450474855" />
     <state x="982" y="379" key="#xdebugger.evaluate/54.0.2506.1440@54.0.2506.1440" timestamp="1610978698116" />
-    <state x="188" y="133" width="2238" height="1174" key="AVDManager" timestamp="1613913222446">
+    <state x="188" y="133" width="2238" height="1174" key="AVDManager" timestamp="1614009083838">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state x="154" y="100" width="1666" height="880" key="AVDManager/54.0.1866.1080@54.0.1866.1080" timestamp="1610443853664" />
-    <state x="188" y="133" width="2238" height="1174" key="AVDManager/54.0.2506.1440@54.0.2506.1440" timestamp="1613913222446" />
+    <state x="188" y="133" width="2238" height="1174" key="AVDManager/54.0.2506.1440@54.0.2506.1440" timestamp="1614009083838" />
     <state x="682" y="287" width="600" height="512" key="AndroidProcessChooserDialog" timestamp="1610442015661">
       <screen x="54" y="0" width="1866" height="1080" />
     </state>
@@ -503,26 +509,26 @@
     </state>
     <state x="770" y="298" width="424" height="491" key="FileChooserDialogImpl/54.0.1866.1080@54.0.1866.1080" timestamp="1613638109587" />
     <state x="802" y="119" width="1084" height="1232" key="FileChooserDialogImpl/54.0.2506.1440@54.0.2506.1440" timestamp="1613941848583" />
-    <state width="2460" height="588" key="GridCell.Tab.0.bottom" timestamp="1613985717764">
+    <state width="2440" height="228" key="GridCell.Tab.0.bottom" timestamp="1614009508989">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.bottom/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2460" height="588" key="GridCell.Tab.0.bottom/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717764" />
-    <state width="2460" height="588" key="GridCell.Tab.0.center" timestamp="1613985717763">
+    <state width="2440" height="228" key="GridCell.Tab.0.bottom/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
+    <state width="2440" height="228" key="GridCell.Tab.0.center" timestamp="1614009508989">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.center/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2460" height="588" key="GridCell.Tab.0.center/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
-    <state width="2460" height="588" key="GridCell.Tab.0.left" timestamp="1613985717763">
+    <state width="2440" height="228" key="GridCell.Tab.0.center/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
+    <state width="2440" height="228" key="GridCell.Tab.0.left" timestamp="1614009508989">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.left/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113564" />
-    <state width="2460" height="588" key="GridCell.Tab.0.left/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
-    <state width="2460" height="588" key="GridCell.Tab.0.right" timestamp="1613985717763">
+    <state width="2440" height="228" key="GridCell.Tab.0.left/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
+    <state width="2440" height="228" key="GridCell.Tab.0.right" timestamp="1614009508989">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.right/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2460" height="588" key="GridCell.Tab.0.right/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
+    <state width="2440" height="228" key="GridCell.Tab.0.right/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
     <state x="790" y="297" width="1024" height="852" key="SettingsEditor" timestamp="1613987292012">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
