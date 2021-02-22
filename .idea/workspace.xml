@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ace6b1f6-e159-4197-a492-06997a027e5d" />
+  </component>
+  <component name="ProjectId" id="1fou7UGoCoA9LJgK5UOGo1GMRgJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets/audio" />
+      <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/assets/video" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flutter.04.colrow.dart">
+    <configuration name="10.permissions.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/10.permissions.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="11.video.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/11.video.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="21.gegevens-inheritedwidget.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/21.gegevens-inheritedwidget.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="22.gegevens-bibliotheek.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/22.gegevens-bibliotheek.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="24.futurebuilder.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/24.futurebuilder.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter.24.futurebuilder.dart" />
+        <item itemvalue="Flutter.22.gegevens-bibliotheek.dart" />
+        <item itemvalue="Flutter.21.gegevens-inheritedwidget.dart" />
+        <item itemvalue="Flutter.11.video.dart" />
+        <item itemvalue="Flutter.10.permissions.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="" />
+      <created>1596896598517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596896598517</updated>
+    </task>
+    <task id="LOCAL-00014" summary="05.menubalk-oef hernoemd">
+      <created>1609335252499</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609335252499</updated>
+    </task>
+    <task id="LOCAL-00015" summary="05.menubalk-oef weg">
+      <created>1609335303517</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609335303517</updated>
+    </task>
+    <task id="LOCAL-00016" summary="05.menubalk-oef1 en 2">
+      <created>1609338054786</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609338054786</updated>
+    </task>
+    <task id="LOCAL-00017" summary="menubalk oefeningen weg">
+      <created>1609339093574</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609339093574</updated>
+    </task>
+    <task id="LOCAL-00018" summary="oefening vogels toegevoegd">
+      <created>1609342590584</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609342590584</updated>
+    </task>
+    <task id="LOCAL-00019" summary="oefeningen vogels, reptielen en egcombineerd toegevoegd">
+      <created>1609412937622</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609412937622</updated>
+    </task>
+    <task id="LOCAL-00020" summary="oefeningen vogels, reptielen en egcombineerd toegevoegd">
+      <created>1609414538160</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609414538160</updated>
+    </task>
+    <task id="LOCAL-00021" summary="nummering aangepast (tekstopmaak naar voren)">
+      <created>1609414621099</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609414621099</updated>
+    </task>
+    <task id="LOCAL-00022" summary="13.dropdown-oef hernoemd">
+      <created>1609417532991</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609417532991</updated>
+    </task>
+    <task id="LOCAL-00023" summary="13.dropdown oefening weg">
+      <created>1609417569334</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609417569334</updated>
+    </task>
+    <task id="LOCAL-00024" summary="20 inheritedwidget aangepast">
+      <created>1609423371977</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609423371977</updated>
+    </task>
+    <task id="LOCAL-00025" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609513643599</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609513643599</updated>
+    </task>
+    <task id="LOCAL-00026" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609513760375</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609513760375</updated>
+    </task>
+    <task id="LOCAL-00027" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609513837833</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1609513837833</updated>
+    </task>
+    <task id="LOCAL-00028" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609514011796</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609514011796</updated>
+    </task>
+    <task id="LOCAL-00029" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609514041709</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609514041709</updated>
+    </task>
+    <task id="LOCAL-00030" summary="voorbeelden inheritedwidget aangepast">
+      <created>1609515018207</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609515018207</updated>
+    </task>
+    <task id="LOCAL-00031" summary="oefeningen inheritedwidget toegevoegd">
+      <created>1609612605494</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609612605495</updated>
+    </task>
+    <task id="LOCAL-00032" summary="hernummerd + 10.permissions toegevoegd">
+      <created>1610465441380</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1610465441380</updated>
+    </task>
+    <task id="LOCAL-00033" summary="hernummerd + 10.permissions toegevoegd">
+      <created>1610465670559</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1610465670559</updated>
+    </task>
+    <task id="LOCAL-00034" summary="hernummerd + 10.permissions toegevoegd">
+      <created>1610731557505</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1610731557505</updated>
+    </task>
+    <task id="LOCAL-00035" summary="10.permissions verbeterd">
+      <created>1610902550708</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610902550709</updated>
+    </task>
+    <task id="LOCAL-00036" summary="10.permissions verbeterd">
+      <created>1610902641430</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610902641430</updated>
+    </task>
+    <task id="LOCAL-00037" summary="10.permissions verbeterd">
+      <created>1610905378542</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610905378542</updated>
+    </task>
+    <task id="LOCAL-00038" summary="09.audio-oef versie 1">
+      <created>1610990316024</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1610990316024</updated>
+    </task>
+    <task id="LOCAL-00039" summary="09.audio-oef versie finaal">
+      <created>1611015630787</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1611015630787</updated>
+    </task>
+    <task id="LOCAL-00040" summary="10.permissions-oef versie">
+      <created>1611093292687</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1611093292687</updated>
+    </task>
+    <task id="LOCAL-00041" summary="10.permissions-oef finaal">
+      <created>1611151008504</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1611151008504</updated>
+    </task>
+    <task id="LOCAL-00042" summary="10.permissions-oef finaal">
+      <created>1611151452640</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1611151452640</updated>
+    </task>
+    <task id="LOCAL-00043" summary="10.permissions-oef finaal">
+      <created>1611152339366</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1611152339366</updated>
+    </task>
+    <task id="LOCAL-00044" summary="10.permissions-oef finaal">
+      <created>1611156264531</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1611156264531</updated>
+    </task>
+    <task id="LOCAL-00045" summary="19.lijsten-oef finaal">
+      <created>1611169830987</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1611169830987</updated>
+    </task>
+    <task id="LOCAL-00046" summary="README aangepast">
+      <created>1611237570778</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1611237570778</updated>
+    </task>
+    <task id="LOCAL-00047" summary="correctie muziekspeler">
+      <created>1613496998391</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1613496998391</updated>
+    </task>
+    <task id="LOCAL-00048" summary="correctie 04.colrow">
+      <created>1613647435090</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1613647435090</updated>
+    </task>
+    <task id="LOCAL-00049" summary="09-oef met ListView.builder">
+      <created>1613658357033</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1613658357033</updated>
+    </task>
+    <task id="LOCAL-00050" summary="10-oef met ListView.builder">
+      <created>1613659872413</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1613659872414</updated>
+    </task>
+    <task id="LOCAL-00051" summary="10-oef met ListView.builder">
+      <created>1613660829666</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1613660829666</updated>
+    </task>
+    <task id="LOCAL-00052" summary="10-oef met ListView.builder met statefulwidgets per item">
+      <created>1613665818042</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1613665818042</updated>
+    </task>
+    <task id="LOCAL-00053" summary="10-oef met ListView.builder met statefulwidgets per item">
+      <created>1613666057460</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1613666057460</updated>
+    </task>
+    <task id="LOCAL-00054" summary="aparte musicplayer map">
+      <created>1613924717887</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1613924717888</updated>
+    </task>
+    <task id="LOCAL-00055" summary="toevoeging 09.audio-oef (meerder timers vermijden)">
+      <created>1613926884316</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1613926884316</updated>
+    </task>
+    <task id="LOCAL-00056" summary="toevoeging 09.audio-oef (meerder timers vermijden)">
+      <created>1613927037554</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1613927037554</updated>
+    </task>
+    <task id="LOCAL-00057" summary="stopAll naar stop hernoemd">
+      <created>1613927095473</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1613927095473</updated>
+    </task>
+    <task id="LOCAL-00058" summary="TrackRij-klasse toegevoegd">
+      <created>1613931421445</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1613931421445</updated>
+    </task>
+    <task id="LOCAL-00059" summary="map musicplayer toegevoegd">
+      <created>1613931616764</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1613931616764</updated>
+    </task>
+    <task id="LOCAL-00060" summary="musicplayer test">
+      <created>1613985427207</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1613985427208</updated>
+    </task>
+    <task id="LOCAL-00061" summary="extra bestanden naar github">
+      <created>1613986023884</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1613986023884</updated>
+    </task>
+    <task id="LOCAL-00062" summary="extra bestanden naar github">
+      <created>1613988053400</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1613988053401</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="13.dropdown-oef hernoemd" />
+    <MESSAGE value="13.dropdown oefening weg" />
+    <MESSAGE value="20 inheritedwidget aangepast" />
+    <MESSAGE value="voorbeelden inheritedwidget aangepast" />
+    <MESSAGE value="oefeningen inheritedwidget toegevoegd" />
+    <MESSAGE value="hernummerd + 10.permissions toegevoegd" />
+    <MESSAGE value="10.permissions verbeterd" />
+    <MESSAGE value="09.audio-oef versie 1" />
+    <MESSAGE value="09.audio-oef versie finaal" />
+    <MESSAGE value="10.permissions-oef versie" />
+    <MESSAGE value="10.permissions-oef finaal" />
+    <MESSAGE value="19.lijsten-oef finaal" />
+    <MESSAGE value="README aangepast" />
+    <MESSAGE value="correctie muziekspeler" />
+    <MESSAGE value="correctie 04.colrow" />
+    <MESSAGE value="09-oef met ListView.builder" />
+    <MESSAGE value="10-oef met ListView.builder" />
+    <MESSAGE value="10-oef met ListView.builder met statefulwidgets per item" />
+    <MESSAGE value="aparte musicplayer map" />
+    <MESSAGE value="toevoeging 09.audio-oef (meerder timers vermijden)" />
+    <MESSAGE value="stopAll naar stop hernoemd" />
+    <MESSAGE value="TrackRij-klasse toegevoegd" />
+    <MESSAGE value="map musicplayer toegevoegd" />
+    <MESSAGE value="musicplayer test" />
+    <MESSAGE value="extra bestanden naar github" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra bestanden naar github" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="982" y="379" key="#xdebugger.evaluate" timestamp="1610978698116">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="745" y="284" key="#xdebugger.evaluate/54.0.1866.1080@54.0.1866.1080" timestamp="1610450474855" />
+    <state x="982" y="379" key="#xdebugger.evaluate/54.0.2506.1440@54.0.2506.1440" timestamp="1610978698116" />
+    <state x="188" y="133" width="2238" height="1174" key="AVDManager" timestamp="1613913222446">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="154" y="100" width="1666" height="880" key="AVDManager/54.0.1866.1080@54.0.1866.1080" timestamp="1610443853664" />
+    <state x="188" y="133" width="2238" height="1174" key="AVDManager/54.0.2506.1440@54.0.2506.1440" timestamp="1613913222446" />
+    <state x="682" y="287" width="600" height="512" key="AndroidProcessChooserDialog" timestamp="1610442015661">
+      <screen x="54" y="0" width="1866" height="1080" />
+    </state>
+    <state x="682" y="287" width="600" height="512" key="AndroidProcessChooserDialog/54.0.1866.1080@54.0.1866.1080" timestamp="1610442015661" />
+    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2" timestamp="1613988053265">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="470" y="98" width="1023" height="890" key="CommitChangelistDialog2/54.0.1866.1080@54.0.1866.1080" timestamp="1613647434977" />
+    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2/54.0.2506.1440@54.0.2506.1440" timestamp="1613988053265" />
+    <state x="292" y="128" width="1492" height="901" key="DiffContextDialog" timestamp="1610731555216">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="231" y="96" width="1492" height="901" key="DiffContextDialog/54.0.1866.1080@54.0.1866.1080" timestamp="1609249147404" />
+    <state x="292" y="128" key="DiffContextDialog/54.0.2506.1440@54.0.2506.1440" timestamp="1610731555216" />
+    <state x="802" y="119" width="1084" height="1232" key="FileChooserDialogImpl" timestamp="1613941848583">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="770" y="298" width="424" height="491" key="FileChooserDialogImpl/54.0.1866.1080@54.0.1866.1080" timestamp="1613638109587" />
+    <state x="802" y="119" width="1084" height="1232" key="FileChooserDialogImpl/54.0.2506.1440@54.0.2506.1440" timestamp="1613941848583" />
+    <state width="2460" height="588" key="GridCell.Tab.0.bottom" timestamp="1613985717764">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state width="1820" height="347" key="GridCell.Tab.0.bottom/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
+    <state width="2460" height="588" key="GridCell.Tab.0.bottom/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717764" />
+    <state width="2460" height="588" key="GridCell.Tab.0.center" timestamp="1613985717763">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state width="1820" height="347" key="GridCell.Tab.0.center/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
+    <state width="2460" height="588" key="GridCell.Tab.0.center/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
+    <state width="2460" height="588" key="GridCell.Tab.0.left" timestamp="1613985717763">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state width="1820" height="347" key="GridCell.Tab.0.left/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113564" />
+    <state width="2460" height="588" key="GridCell.Tab.0.left/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
+    <state width="2460" height="588" key="GridCell.Tab.0.right" timestamp="1613985717763">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state width="1820" height="347" key="GridCell.Tab.0.right/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
+    <state width="2460" height="588" key="GridCell.Tab.0.right/54.0.2506.1440@54.0.2506.1440" timestamp="1613985717763" />
+    <state x="790" y="297" width="1024" height="852" key="SettingsEditor" timestamp="1613987292012">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="790" y="297" width="1024" height="852" key="SettingsEditor/54.0.2506.1440@54.0.2506.1440" timestamp="1613987292012" />
+    <state x="902" y="442" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1613988056267">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="902" y="442" width="800" height="563" key="Vcs.Push.Dialog.v2/54.0.2506.1440@54.0.2506.1440" timestamp="1613988056267" />
+    <state width="1253" height="720" key="XDebugger.FullValuePopup" timestamp="1610892004682">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state width="1253" height="720" key="XDebugger.FullValuePopup/54.0.2506.1440@54.0.2506.1440" timestamp="1610892004682" />
+    <state x="960" y="337" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613926544007">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="960" y="337" width="683" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/54.0.2506.1440@54.0.2506.1440" timestamp="1613926544007" />
+    <state x="995" y="459" width="623" height="522" key="find.popup" timestamp="1610469227160">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="995" y="459" width="623" height="522" key="find.popup/54.0.2506.1440@54.0.2506.1440" timestamp="1610469227160" />
+    <state x="699" y="234" width="566" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1613647417597">
+      <screen x="54" y="0" width="1866" height="1080" />
+    </state>
+    <state x="699" y="234" width="566" height="619" key="git4idea.branch.GitSmartOperationDialog/54.0.1866.1080@54.0.1866.1080" timestamp="1613647417597" />
+    <state x="856" y="327" key="run.anything.popup" timestamp="1611077288075">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="651" y="245" key="run.anything.popup/54.0.1866.1080@54.0.1866.1080" timestamp="1609259808249" />
+    <state x="856" y="327" key="run.anything.popup/54.0.2506.1440@54.0.2506.1440" timestamp="1611077288075" />
+    <state x="970" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1610989280585">
+      <screen x="54" y="0" width="2506" height="1440" />
+    </state>
+    <state x="970" y="329" width="672" height="678" key="search.everywhere.popup/54.0.2506.1440@54.0.2506.1440" timestamp="1610989280585" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/21.gegevens-inheritedwidget.dart</url>
+          <line>76</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/20.gegevens-inheritedwidget.dart</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
