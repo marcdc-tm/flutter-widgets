@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="">
+    <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="extra bestanden naar github">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -491,11 +492,11 @@
       <screen x="54" y="0" width="1866" height="1080" />
     </state>
     <state x="682" y="287" width="600" height="512" key="AndroidProcessChooserDialog/54.0.1866.1080@54.0.1866.1080" timestamp="1610442015661" />
-    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2" timestamp="1613988053265">
+    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2" timestamp="1614011586496">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state x="470" y="98" width="1023" height="890" key="CommitChangelistDialog2/54.0.1866.1080@54.0.1866.1080" timestamp="1613647434977" />
-    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2/54.0.2506.1440@54.0.2506.1440" timestamp="1613988053265" />
+    <state x="613" y="131" width="912" height="908" key="CommitChangelistDialog2/54.0.2506.1440@54.0.2506.1440" timestamp="1614011586496" />
     <state x="292" y="128" width="1492" height="901" key="DiffContextDialog" timestamp="1610731555216">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
