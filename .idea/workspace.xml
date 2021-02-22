@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df786744-148a-49c2-bf4a-a8b2eeb2e2e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/07.afbeelding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/07.afbeelding.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="oplossingen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +41,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -60,11 +57,7 @@
       <recent name="$PROJECT_DIR$/assets/video" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.08.tekstopmaak.dart">
-    <configuration name="05.menubalk-1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/05.menubalk-1.dart" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Flutter.07.vogelsenreptielen.dart">
     <configuration name="05.menubalk-2.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/05.menubalk-2.dart" />
       <method v="2" />
@@ -77,17 +70,21 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/07.afbeelding.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="07.vogelsenreptielen.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/07.vogelsenreptielen.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="08.tekstopmaak.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/08.tekstopmaak.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.07.vogelsenreptielen.dart" />
         <item itemvalue="Flutter.08.tekstopmaak.dart" />
         <item itemvalue="Flutter.07.afbeelding.dart" />
         <item itemvalue="Flutter.06.dynamicmenu.dart" />
         <item itemvalue="Flutter.05.menubalk-2.dart" />
-        <item itemvalue="Flutter.05.menubalk-1.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -509,26 +506,26 @@
     </state>
     <state x="770" y="298" width="424" height="491" key="FileChooserDialogImpl/54.0.1866.1080@54.0.1866.1080" timestamp="1613638109587" />
     <state x="802" y="119" width="1084" height="1232" key="FileChooserDialogImpl/54.0.2506.1440@54.0.2506.1440" timestamp="1613941848583" />
-    <state width="2440" height="228" key="GridCell.Tab.0.bottom" timestamp="1614009508989">
+    <state width="2440" height="433" key="GridCell.Tab.0.bottom" timestamp="1614010592846">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.bottom/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2440" height="228" key="GridCell.Tab.0.bottom/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
-    <state width="2440" height="228" key="GridCell.Tab.0.center" timestamp="1614009508989">
+    <state width="2440" height="433" key="GridCell.Tab.0.bottom/54.0.2506.1440@54.0.2506.1440" timestamp="1614010592846" />
+    <state width="2440" height="433" key="GridCell.Tab.0.center" timestamp="1614010592846">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.center/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2440" height="228" key="GridCell.Tab.0.center/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
-    <state width="2440" height="228" key="GridCell.Tab.0.left" timestamp="1614009508989">
+    <state width="2440" height="433" key="GridCell.Tab.0.center/54.0.2506.1440@54.0.2506.1440" timestamp="1614010592846" />
+    <state width="2440" height="433" key="GridCell.Tab.0.left" timestamp="1614010592845">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.left/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113564" />
-    <state width="2440" height="228" key="GridCell.Tab.0.left/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
-    <state width="2440" height="228" key="GridCell.Tab.0.right" timestamp="1614009508989">
+    <state width="2440" height="433" key="GridCell.Tab.0.left/54.0.2506.1440@54.0.2506.1440" timestamp="1614010592845" />
+    <state width="2440" height="433" key="GridCell.Tab.0.right" timestamp="1614010592846">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
     <state width="1820" height="347" key="GridCell.Tab.0.right/54.0.1866.1080@54.0.1866.1080" timestamp="1613638113565" />
-    <state width="2440" height="228" key="GridCell.Tab.0.right/54.0.2506.1440@54.0.2506.1440" timestamp="1614009508989" />
+    <state width="2440" height="433" key="GridCell.Tab.0.right/54.0.2506.1440@54.0.2506.1440" timestamp="1614010592846" />
     <state x="790" y="297" width="1024" height="852" key="SettingsEditor" timestamp="1613987292012">
       <screen x="54" y="0" width="2506" height="1440" />
     </state>
