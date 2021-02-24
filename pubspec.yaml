@@ -26,6 +26,7 @@ dependencies:
   permission_handler: ^5.0.1+1
   audiotagger: ^1.1.0
   video_player: ^0.10.11+2
+  ini: ^2.0.1
   flutter:
     sdk: flutter
 
