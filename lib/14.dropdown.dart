@@ -32,7 +32,30 @@ class AppTreeState extends State<AppTree> {
 
     return Column(
         children: <Widget>[
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: <Widget>[
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            Checkbox(
+              value: zichtbaar,
+              onChanged: (bool value) {
+                setState(() {
+                  zichtbaar = value;
+                });
+                print(zichtbaar);
+              },
+            ),
+            Text('zichtbaar?')
+          ]),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            Switch(
+              value: zichtbaar,
+              onChanged: (bool value) {
+                setState(() {
+                  zichtbaar = value;
+                });
+                print(zichtbaar);
+              },
+            ),
+            Text('zichtbaar?')
+          ]),          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: <Widget>[
             Row(children: <Widget>[
               Radio(
                 value: false,
@@ -92,7 +115,16 @@ class AppTreeState extends State<AppTree> {
               ),
             )
           ]),
-          Center(child: Visibility(child: FlutterLogo(size:grootte, textColor: lijstMap[keuzeKleur], style: FlutterLogoStyle.stacked), visible: zichtbaar))
+          Center(
+            child: Visibility(
+              child: FlutterLogo(
+                size:grootte,
+                textColor: lijstMap[keuzeKleur],
+                style: FlutterLogoStyle.stacked
+              ),
+              visible: zichtbaar
+            )
+          )
         ]
     );
   }
