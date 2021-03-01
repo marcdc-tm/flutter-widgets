@@ -77,7 +77,7 @@ class Vogel1 extends StatelessWidget {
             child: Text("De ijsvogel (Alcedo atthis) is een waterminnende vogel uit de familie van ijsvogels (Alcedinidae). " +
                 "Het is een opvallende verschijning door zijn afstekende blauwe en oranje kleuren, maar ook een zeer schuwe soort die zich weinig laat zien. " +
                 "Alcedo atthis is de enige ijsvogelsoort die tot in noordelijk Europa voorkomt inclusief Nederland en België, " +
-                "althans de ondersoort Alcedo atthis ispida. De meeste ijsvogels leven in de tropen.", textScaleFactor: 1.2,),
+                "althans de ondersoort Alcedo atthis ispida. De meeste ijsvogels leven in de tropen.", textScaleFactor: 1,),
           )
         ],
       ),
@@ -120,7 +120,7 @@ class Vogel2 extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: Text("Kolibries (Trochilidae) zijn een familie van vogels uit de orde van de gierzwaluwachtigen (Apodiformes). " +
                 "De familie telt meer dan 350 soorten. De meeste soorten komen voor in Zuid-Amerika. " +
-                "Het oorspronggebied (genencentrum) van de kolibries ligt waarschijnlijk daar.", textScaleFactor: 1.2,),
+                "Het oorspronggebied (genencentrum) van de kolibries ligt waarschijnlijk daar.", textScaleFactor: 1,),
           )
         ],
       ),
@@ -149,7 +149,7 @@ class Vogel3 extends StatelessWidget {
             margin: EdgeInsets.all(20),
             child: Text("De oehoe (Bubo bubo) is een van de grootste uilen ter wereld, en vermoedelijk de op een na grootste uilensoort na de Blakistons visuil. "+
                 "De wetenschappelijke naam van de soort werd als Strix bubo in 1758 gepubliceerd door Carl Linnaeus. " +
-                "De vogel heeft zijn naam te danken aan zijn roep. Vooral in de late winter laat het mannetje zijn imposante oehoe-roep horen.", textScaleFactor: 1.2,),
+                "De vogel heeft zijn naam te danken aan zijn roep. Vooral in de late winter laat het mannetje zijn imposante oehoe-roep horen.", textScaleFactor: 1,),
           )
         ],
       ),
@@ -184,7 +184,7 @@ class Reptiel1 extends StatelessWidget {
             child: Text("Gekko's vormen een van de grootste groepen van gewervelde dieren en worden vertegenwoordigd door ruim 1400 soorten in meer dan 120 geslachten. " +
                 "Gekko's komen in alle warme streken van de wereld voor in uiteenlopende habitats; van dichtbegroeide bossen (bladstaartgekko's) tot in " +
                 "woestijnachtige gebieden (dikvingergekko's). Gekko's kunnen niet overleven in gematigde streken zoals België en Nederland, maar in zuidelijk Europa " +
-                "zijn enkele soorten zeer algemeen. ", textScaleFactor: 1.2,),
+                "zijn enkele soorten zeer algemeen. ", textScaleFactor: 1,),
           )
         ],
       ),
@@ -228,7 +228,7 @@ class Reptiel2 extends StatelessWidget {
             child: Text("Iguana is een geslacht van hagedissen die behoren tot de familie leguanen." + ""
                 "Ze hebben een kenmerkende halskwab, een stekelrij op de rug en een sublabiale schub op de wang. " +
                 "Ook hebben ze, net als veel andere hagedissen, een derde oog op het hoofd. Ze hebben zeer goed zicht, dat ze gebruiken om voedsel " +
-                "te vinden en met soortgenoten te communiceren. ", textScaleFactor: 1.2,),
+                "te vinden en met soortgenoten te communiceren. ", textScaleFactor: 1,),
           )
         ],
       ),
@@ -261,7 +261,7 @@ class Reptiel3 extends StatelessWidget {
                 "een erg kwetsbare diersoort en is daardoor van bescherming afhankelijk. De komodovaraan eet naast levende prooien ook wel aas. " +
                 "Veel van de kadavers die gegeten worden zijn indirect door de varaan gedood. De komodovaraan wordt daarom beschouwd als een carnivoor " +
                 "en een alfapredator, die aan de top staat van het ecosysteem. Vrijwel alle hagedissen worden door verschillende dieren gegeten, " +
-                "maar de komodovaraan heeft, eenmaal volwassen, geen natuurlijke vijanden.", textScaleFactor: 1.2,),
+                "maar de komodovaraan heeft, eenmaal volwassen, geen natuurlijke vijanden.", textScaleFactor: 0.9,),
           )
         ],
       ),
