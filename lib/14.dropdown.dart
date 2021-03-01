@@ -8,11 +8,40 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree(),
+      body: AppTree1(),
       appBar: AppBar(title: Text("Gegevensinvoer"),),
     ),
   );
 }
+
+class AppTree1 extends StatefulWidget {
+  AppTreeState1 createState() => AppTreeState1();
+}
+
+class AppTreeState1 extends State<AppTree1> {
+  bool zichtbaar = false;
+
+  Widget build(BuildContext context) {
+    return Column(
+        children: <Widget>[
+          Checkbox(
+            value: zichtbaar,
+            onChanged: (bool value) {
+              setState(() {
+                zichtbaar = value;
+              });
+              print(zichtbaar);
+            },
+          ),
+          Center(child: FlutterLogo(size:200))
+        ]
+    );
+  }
+}
+
+
+
+
 
 class AppTree extends StatefulWidget {
   AppTreeState createState() => AppTreeState();
