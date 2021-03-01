@@ -7,11 +7,41 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree(),
+      body: AppTree1(),
       appBar: AppBar(title: Text("Animatie"),),
     ),
   );
 }
+
+class AppTree1 extends StatefulWidget {
+  AppTreeState1 createState() => AppTreeState1();
+}
+
+class AppTreeState1 extends State<AppTree1> with SingleTickerProviderStateMixin {
+  Animation<double> animatie;
+  AnimationController animatieController;
+
+  void initState() {
+    animatieController = AnimationController(
+        duration: const Duration(seconds: 2),
+        vsync: this
+    );
+    animatie = Tween<double>(begin: 0, end: 10).animate(animatieController);
+    animatie.addListener(() {
+      setState(() { });
+    });
+    animatieController.forward();
+    super.initState();
+  }
+
+  Widget build(BuildContext context) {
+    return Center(child: Text("Groei", textScaleFactor: animatie.value));
+  }
+}
+
+
+
+
 
 class AppTree extends StatefulWidget {
   AppTreeState createState() => AppTreeState();
@@ -23,8 +53,8 @@ class AppTreeState extends State<AppTree> with SingleTickerProviderStateMixin {
 
   void initState() {
     animatieController = AnimationController(
-      duration: const Duration(seconds: 2),
-      vsync: this
+        duration: const Duration(seconds: 2),
+        vsync: this
     );
     animatie = Tween<double>(begin: 0, end: 10).animate(animatieController);
     animatie.addListener(() {
@@ -48,8 +78,8 @@ class AppTreeState extends State<AppTree> with SingleTickerProviderStateMixin {
 
   Widget build(BuildContext context) {
     return Transform.rotate(
-      angle: animatie.value/1.5,
-      child: Center(child: Text("Groei", textScaleFactor: animatie.value))
+        angle: animatie.value/1.5,
+        child: Center(child: Text("Groei", textScaleFactor: animatie.value))
     );
   }
 }

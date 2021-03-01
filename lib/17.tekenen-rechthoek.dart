@@ -7,11 +7,40 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree(),
+      body: AppTree1(),
       appBar: AppBar(title: Text("Tekenen"),),
     ),
   );
 }
+
+class AppTree1 extends StatefulWidget {
+  AppTreeState1 createState() => AppTreeState1();
+}
+
+class AppTreeState1 extends State<AppTree1> {
+  Widget build(BuildContext context) {
+    return CustomPaint(
+        painter: PainterTest1(),
+        size: MediaQuery.of(context).size
+    );
+  }
+}
+
+class PainterTest1 extends CustomPainter {
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    paint.color = Colors.blue;
+    var rect = Rect.fromLTWH(20, 20, size.width - 40, size.height - 40);
+    canvas.drawRect(rect, paint);
+  }
+
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return false;
+  }
+}
+
+
+
 
 class AppTree extends StatefulWidget {
   AppTreeState createState() => AppTreeState();

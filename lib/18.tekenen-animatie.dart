@@ -27,7 +27,7 @@ class AppTreeState extends State<AppTree> with SingleTickerProviderStateMixin {
       duration: const Duration(seconds: 5), vsync: this);
     animatie = Tween<double>(begin: 0, end: 2 * pi).animate(animatieController);
     animatie.addListener(() { setState(() { });});
-    animatieController.forward();
+    //animatieController.forward();
     animatie.addStatusListener((status) {
       if (status==AnimationStatus.completed) {
         animatieController.repeat();
