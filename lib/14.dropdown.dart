@@ -373,7 +373,7 @@ class AppTreeState6 extends State<AppTree6> {
                   visible: zichtbaar
               )
           ),
-          Center(Text(tekst, textScaleFactor: 2))
+          Center(Text(tekst, textScaleFactor: 2, style: TextStyle(color: keuzeKleur.color)))
         ]
     );
   }
