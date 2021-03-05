@@ -24,7 +24,7 @@ class AppTreeState1 extends State<AppTree1> with SingleTickerProviderStateMixin 
   void initState() {
     animatieController = AnimationController(
         duration: const Duration(seconds: 2),
-        vsync: this
+        vsync: this  // = hiervoor hebben we de mixin nodig
     );
     animatie = Tween<double>(begin: 0, end: 10).animate(animatieController);
     animatie.addListener(() {

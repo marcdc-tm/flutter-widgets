@@ -10,3 +10,5 @@ TextStyle kopTekst = TextStyle(
 );
 
 StreamController<String> tekstStroom = StreamController<String>();
+
+StreamController<bool> boolStroom = StreamController.broadcast();
