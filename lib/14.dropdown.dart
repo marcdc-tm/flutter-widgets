@@ -8,7 +8,7 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree5(),
+      body: AppTree6(),
       appBar: AppBar(title: Text("Gegevensinvoer"),),
     ),
   );
@@ -327,8 +327,8 @@ class AppTreeState6 extends State<AppTree6> {
             ),
             Text('zichtbaar?')
           ]),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: <Widget>[
-            Container(
+          Center(
+            child: Container(
               width: 150,
               child: DropdownButton<Color>(
                 items: kleuren.map((Color kleur) {
@@ -345,7 +345,7 @@ class AppTreeState6 extends State<AppTree6> {
                 },
               ),
             )
-          ]),
+          ),
           Center(
             child: Container(
               width: 300,
@@ -357,23 +357,21 @@ class AppTreeState6 extends State<AppTree6> {
                     border: InputBorder.none,
                     hintText: 'Voer hier je tekst in'
                 ),
-                onChanged: (tekstinvoer) {
-                  tekst = tekstinvoer;
+                onSubmitted: (tekstinvoer) {
+                  setState(() {
+                    tekst = tekstinvoer;
+                  });
                 },
+                /*onChanged: (tekstinvoer) {
+                  setState(() {
+                    tekst = tekstinvoer;
+                  });
+                },*/
               ),
             ),
           ),
-          Center(
-              child: Visibility(
-                  child: FlutterLogo(
-                      size: 200,
-                      textColor: keuzeKleur,
-                      style: FlutterLogoStyle.stacked
-                  ),
-                  visible: zichtbaar
-              )
-          ),
-          Center(Text(tekst, textScaleFactor: 2, style: TextStyle(color: keuzeKleur.color)))
+          Center(child: Visibility(child: FlutterLogo(size: 100, textColor: keuzeKleur,), visible: zichtbaar)),
+          Center(child: Text(tekst, textScaleFactor: 2, style: TextStyle(color: keuzeKleur)))
         ]
     );
   }
