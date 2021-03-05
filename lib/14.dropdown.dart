@@ -302,6 +302,91 @@ class AppTreeState5 extends State<AppTree5> {
 
 
 
+class AppTree6 extends StatefulWidget {
+  AppTreeState6 createState() => AppTreeState6();
+}
+
+class AppTreeState6 extends State<AppTree6> {
+  bool zichtbaar = false;
+  List<Color> kleuren = [ Colors.red, Colors.green, Colors.blue, Colors.yellow, Colors.black ];
+  Color keuzeKleur = Colors.red;
+  String tekst = "hier jouw invoer";
+
+  Widget build(BuildContext context) {
+    return Column(
+        children: <Widget>[
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            Switch(
+              value: zichtbaar,
+              onChanged: (bool value) {
+                setState(() {
+                  zichtbaar = value;
+                });
+                print(zichtbaar);
+              },
+            ),
+            Text('zichtbaar?')
+          ]),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: <Widget>[
+            Container(
+              width: 150,
+              child: DropdownButton<Color>(
+                items: kleuren.map((Color kleur) {
+                  return DropdownMenuItem<Color>(
+                      value: kleur,
+                      child: Container(color: kleur, width:100, height: 20,)
+                  );
+                }).toList(),
+                value: keuzeKleur,
+                onChanged: (value) {
+                  setState(() {
+                    keuzeKleur = value;
+                  });
+                },
+              ),
+            )
+          ]),
+          Center(
+            child: Container(
+              width: 300,
+              margin: EdgeInsets.symmetric(vertical: 20),
+              child: TextField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey[200],
+                    border: InputBorder.none,
+                    hintText: 'Voer hier je tekst in'
+                ),
+                onChanged: (tekstinvoer) {
+                  tekst = tekstinvoer;
+                },
+              ),
+            ),
+          ),
+          Center(
+              child: Visibility(
+                  child: FlutterLogo(
+                      size: 200,
+                      textColor: keuzeKleur,
+                      style: FlutterLogoStyle.stacked
+                  ),
+                  visible: zichtbaar
+              )
+          ),
+          Center(Text(tekst, textScaleFactor: 2))
+        ]
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 class AppTree extends StatefulWidget {
