@@ -8,7 +8,7 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree4(),
+      body: AppTree5(),
       appBar: AppBar(title: Text("Gegevensinvoer"),),
     ),
   );
@@ -248,20 +248,9 @@ class AppTree5 extends StatefulWidget {
 class AppTreeState5 extends State<AppTree5> {
   bool zichtbaar = false;
   List<Color> kleuren = [ Colors.red, Colors.green, Colors.blue, Colors.yellow, Colors.black ];
-  //Map<Container, Color> lijstMap = { Container(b): Colors.red, 'groen': Colors.green, 'blauw': Colors.blue };
   Color keuzeKleur = Colors.red;
-  Map<Color, Container> lijstMap = Map();
 
   Widget build(BuildContext context) {
-    kleuren.forEach((kleur) {
-      lijstMap[kleur] = Container(color: kleur, width:100, height: 20,);
-    });
-
-    List<DropdownMenuItem<Color>> opties = List<DropdownMenuItem<Color>>();
-    lijstMap.forEach((key, value) {
-      opties.add(DropdownMenuItem(child: value, value: key ));
-    });
-
     return Column(
         children: <Widget>[
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
@@ -280,13 +269,13 @@ class AppTreeState5 extends State<AppTree5> {
             Container(
               width: 150,
               child: DropdownButton<Color>(
-                items: kleuren.map(key, value) {
-                    return  DropdownMenuItem<Color>(
-                      value: key,
-                      child: value
+                items: kleuren.map((Color kleur) {
+                    return DropdownMenuItem<Color>(
+                      value: kleur,
+                      child: Container(color: kleur, width:100, height: 20,)
                     );
-                  }.toList(),
-                  value: keuzeKleur,
+                  }).toList(),
+                value: keuzeKleur,
                 onChanged: (value) {
                   setState(() {
                     keuzeKleur = value;
@@ -295,24 +284,11 @@ class AppTreeState5 extends State<AppTree5> {
               ),
             )
           ]),
-
-
-    lijst.map((Item kleur) {
-    return  DropdownMenuItem<Item>(
-    value: kleur,
-    child: Row(
-    children: <Widget>[
-    Container(margin: EdgeInsets.only(left: 20), width:100, height: 15, color: kleur.color)
-    ],
-    ),
-    );
-    }).toList(),
-
-    Center(
+          Center(
               child: Visibility(
                   child: FlutterLogo(
                       size: 200,
-                      textColor: lijstMap[keuzeKleur],
+                      textColor: keuzeKleur,
                       style: FlutterLogoStyle.stacked
                   ),
                   visible: zichtbaar
