@@ -279,9 +279,14 @@ class AppTreeState5 extends State<AppTree5> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: <Widget>[
             Container(
               width: 150,
-              child: DropdownButton<Container>(
-                items: opties,
-                value: keuzeKleur,
+              child: DropdownButton<Color>(
+                items: kleuren.map(key, value) {
+                    return  DropdownMenuItem<Color>(
+                      value: key,
+                      child: value
+                    );
+                  }.toList(),
+                  value: keuzeKleur,
                 onChanged: (value) {
                   setState(() {
                     keuzeKleur = value;
@@ -290,7 +295,20 @@ class AppTreeState5 extends State<AppTree5> {
               ),
             )
           ]),
-          Center(
+
+
+    lijst.map((Item kleur) {
+    return  DropdownMenuItem<Item>(
+    value: kleur,
+    child: Row(
+    children: <Widget>[
+    Container(margin: EdgeInsets.only(left: 20), width:100, height: 15, color: kleur.color)
+    ],
+    ),
+    );
+    }).toList(),
+
+    Center(
               child: Visibility(
                   child: FlutterLogo(
                       size: 200,
