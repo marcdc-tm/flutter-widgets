@@ -19,7 +19,17 @@ class AppTree extends StatefulWidget {
 }
 
 class AppTreeState extends State<AppTree> {
-  int getal = 2;
+  int getal = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    read("laatstegetal").then((waarde) {
+      setState(() {
+        getal = waarde;
+      });
+    });
+  }
 
   Widget build(BuildContext context) {
     return Column(
@@ -28,9 +38,6 @@ class AppTreeState extends State<AppTree> {
         FloatingActionButton(
           child: Icon(Icons.plus_one),
           onPressed: () {
-            read("laatstegetal").then((value) {
-              print('$value werd uitgelezen');
-            });
             setState(() {
               getal++;
               save("laatstegetal", getal);
@@ -41,13 +48,13 @@ class AppTreeState extends State<AppTree> {
     );
   }
 
-  Future save(String naam, int waarde) async {
+  Future<void> save(String naam, int waarde) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setInt(naam, waarde);
     print('$waarde opgeslagen in $naam');
   }
 
-  Future read(String naam) async {
+  Future<int> read(String naam) async {
     final prefs = await SharedPreferences.getInstance();
     final waarde = prefs.getInt(naam) ?? 0;
     return waarde;
