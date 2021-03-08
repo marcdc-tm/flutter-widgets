@@ -62,8 +62,6 @@ class AppTree extends StatefulWidget {
 }
 
 class AppTreeState extends State<AppTree> {
-  List<String> tekstOpScherm = [ "Eerste tekst" , "Alterantieve tekst" ];
-  bool actief = true;
 
   Widget build(BuildContext context) {
     return Column(
@@ -80,17 +78,16 @@ class AppTreeState extends State<AppTree> {
               });
             },
           ),
-          TekstOpScherm(actief, [ "Een eerste tekst", "Een tweede tekst"]),
-          TekstOpScherm(actief, [ "De eerste paragraaf", "De tweede paragraaf"]),
+          TekstOpScherm([ "Een eerste tekst", "Een tweede tekst"]),
+          TekstOpScherm([ "De eerste paragraaf", "De tweede paragraaf"]),
         ]);
   }
 }
 
 class TekstOpScherm extends StatefulWidget {
-  bool actief;
   List<String> teksten;
 
-  TekstOpScherm(this.actief, this.teksten);
+  TekstOpScherm(this.teksten);
 
   _TekstOpSchermState createState() => _TekstOpSchermState();
 }
