@@ -8,7 +8,7 @@ void main() {
 class AppRoot extends StatelessWidget {
   Widget build(BuildContext buildContext) => MaterialApp(
     home: Scaffold(
-      body: AppTree6(),
+      body: AppTree1(),
       appBar: AppBar(title: Text("Gegevensinvoer"),),
     ),
   );
